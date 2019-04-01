@@ -1,6 +1,9 @@
-$('#container').append($('<div/>', {'id': 'colourBox'}));
-TweenMax.set($('#colourBox'), {width: '100%', height: '100%'})
-var tl = new TimelineMax({timeScale: 10, repeat: -1});
-tl.fromTo($('#colourBox'), 5, {backgroundColor: '#cc0000'}, {backgroundColor: '#0000cc'});
-tl.fromTo($('#colourBox'), 5, {backgroundColor: '#0000cc'}, {backgroundColor: '#cccc00'});
-tl.fromTo($('#colourBox'), 5, {backgroundColor: '#cccc00'}, {backgroundColor: '#cc0000'});
+document.body.addEventListener('scroll', function(){
+  var maxScroll = $('#container').height() - $(document.body).height();
+  var currScroll = document.body.scrollTop;
+  var percentage = currScroll/maxScroll;
+
+  $('#container').css({
+    'background':'rgba('+ 255 * (percentage) +', 0, '+ 255 * (1-percentage) +', 1)',
+  });
+});
