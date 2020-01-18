@@ -1,31 +1,114 @@
+/*		Green:	#008000				*/
+/*		Purple:	#800080				*/
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Anton', sans-serif;
-	color: white;
-}
-h1 {
-	font-size: 5em;
 }
 p, li {
 	font-family: 'Roboto', sans-serif;
 }
 
+a:visited {
+	color: #800080;
+}
+
+a:link {
+	color: #008000;
+	text-decoration: none;
+}
+
 body, html {
 	padding: 0;
 	margin: 0;
+}
+
+table {
+	width: auto;	
+}
+
+table, tr, td {
+	margin: 0;
+	padding: 1%;
+}
+
+td:nth-child(even)
+{
+	width: auto;
+}
+
+#center-wrapper {
+	position: absolute;
+	width: 70%;	
+	height: 100%;
+	left: 15%;
+}
+
+#header {
+	position: relative;
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	padding: 0 2%;
+}
+
+#header h1, #header p, #navBar p{
+	margin: 0;
+	padding: 0;
+}
+
+#navBar {
+	width: 100%;
+	height: 20px;
+}
+
+#switch {
+	height: 100%;
+	width: 50px;
+}
+
+#navBar button {
+	float: right;
+	margin-left: 2%;
+	width: auto;
+	height: auto;
+	cursor: pointer;
+	background: none;
+	border: none;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+#navBar button.active {
+	color: #800080;
+	font-weight: bold;
+}
+
+#navBar button:hover {
+	color: #008000;
+}
+
+#navBar button:active {
+	border: none;
+}
+
+#logo {
+	float: left;
+	width: 100px;
+	height: 100px;
+	background: url(../img/jiLogo.png) 50% 50% no-repeat;
+	background-size: contain;
+}
+
+#pageContainer {
+	position: relative;
 	width: 100%;
 	height: 100%;
-	overflow-x: hidden;
+	background: lightgrey;
+	box-sizing: border-box;
+	padding:  5% 10%;
 }
 
-#container {
-	width: 100%;
-	height: 500%;
-	background-size: 100% 100%;
-	background: rgba(0, 0, 255, 1);
-}
 
-#container h1 {
-	text-align: center;
-	width: 100%;
-	position: fixed;
-}
+
+
+
