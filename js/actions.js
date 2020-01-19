@@ -2,6 +2,10 @@
 var startedCoding = 2015;
 $('#codingYears').html(new Date().getFullYear() - startedCoding);
 
+$('#pageContainer h1').animate({opacity: 1}, 500);
+$('#pageContainer p').animate({opacity: 1}, 500);
+
+var showParticles = true;
 //create svg
 var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 svg.setAttribute('width', $(window).width());
@@ -48,6 +52,9 @@ requestAnimationFrame(particles);
 
 function particles()
 {
+	if(!showParticles)
+		return;		
+
 	var radius = chance.floating({min: 0.5, max: 8});
 	var tmp = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
 	tmp.setAttribute('cx', -radius);
@@ -62,3 +69,10 @@ function particles()
 
 	requestAnimationFrame(particles);
 }
+
+
+//set up particle switch
+document.getElementById('particleSwitch').addEventListener('change', function(){	
+	showParticles = !showParticles;
+	if(showParticles) requestAnimationFrame(particles);
+});
