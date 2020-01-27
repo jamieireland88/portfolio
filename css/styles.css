@@ -3,9 +3,11 @@
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Anton', sans-serif;
+	color: #333333;
 }
 p, li {
 	font-family: 'Roboto', sans-serif;
+	color: #333333;
 }
 
 a:visited {
@@ -80,7 +82,7 @@ td:nth-child(even)
 	margin: 0;
 }
 
-#navBar button {
+div#navBar button {
 	float: right;
 	margin-left: 2%;
 	width: auto;
@@ -98,16 +100,16 @@ td:nth-child(even)
 	width: 200px; height: auto;
 }
 
-#navBar button.active {
+div#navBar button.active {
 	color: #800080;
 	font-weight: bold;
 }
 
-#navBar button:hover {
+div#navBar button:hover {
 	color: #008000;
 }
 
-#navBar button:active {
+div#navBar button:active {
 	border: none;
 }
 
@@ -126,10 +128,6 @@ td:nth-child(even)
 	background: rgba(192, 192, 192, 0.9);
 	box-sizing: border-box;
 	padding:  5% 10%;
-}
-
-#pageContainer h1, #pageContainer p {
-	opacity: 0;
 }
 
 /* The switch - the box around the slider */
@@ -213,4 +211,31 @@ input:checked + .slider:before {
 
 #footer p {
 	font-size: 0.8em;
+}
+
+button {
+	color: green;
+}
+
+
+/*------------SCROLLBAR---------------*/
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 50px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
