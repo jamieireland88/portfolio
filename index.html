@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jamie Ireland | Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Anton|Roboto:500" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters">
+	  <defs>
+	    <filter id="filter">
+	      <feTurbulence type="fractalNoise" baseFrequency="0.00001 0.00001" numOctaves="1" result="warp" />
+	      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+	    </filter>
+	  </defs>
+	</svg>
+</head>
+<body>
+	<div id="pageContainer">
+		<div class="header-container">
+				<a href="/" class="header-icon-link">
+					<img id="logo" src="../images/jiLogo.png" alt="Jamie Ireland's Logo">
+					<h1>Jamie<br>Ireland</h1>
+				</a>
+				<a href="../files/JamieIreland-CV.pdf" target="_blank" class="button header-cv-link">
+					<img src="../images/download.png" alt="Download/View my CV">
+				</a>
+		</div>
+		<p>Hi, I'm Jamie Ireland. Over the past <span class="year-difference"></span> years I've progressed from a Multimedia Digital Designer,
+			creating on-trend, visually impactful eLearning games, to a Front-end Developer working on client management portals and bespoke apps,
+			to being a Full-Stack Developer in an evergrowing, market-leading, global hospitality solutions provider.</p>
+
+		<div id="navContainer">
+			<a href="../pages/about.html" class="navItem hidden"><h2>About</h2></a>
+			<a href="../pages/animations.html" class="navItem hidden"><h2>Animations</h2></a>
+			<a href="../pages/games.html" class="navItem hidden"><h2>Games</h2></a>
+			<a href="../pages/contact.html" class="navItem hidden"><h2>Contact</h2></a>
+		</div>
+
+		<div id="footer">
+			<h6>Designed and built by Jamie Ireland <span class="year"></span></h6>
+			<h6>Hosted on Github pages</h6>
+		</div>
+
+	</div>
+</body>
+<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+<script type="text/javascript" src="./js/dates.js"></script>
+<script type="text/javascript" src="./js/actions.js"></script>
+<script type="text/javascript">
+	var c = document.getElementById('navContainer').children;
+	var d = ['fadeInRight', 'fadeInLeft', 'zoomIn', 'flipInY'];
+	var n = [2, 1, 3, 0];
+
+	for(var i = 0; i < c.length; i++)
+	{
+		$(c[n[i]]).show().addClass('animate__animated animate__' + d[i]).css({
+			'animation-delay': (0.1 * i) + 's',
+			'-webkit-animation-delay': (0.1 * i) + 's',
+			'animation-duration': '0.5s',
+			'-webkit-animation-duration': '0.5s',
+		});
+	}
+</script>
+</html>
