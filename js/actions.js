@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	//Handle turbulent displacement filter
-	var bt = document.querySelectorAll('.navItem, .button');
+	var bt = document.querySelectorAll('.navItem, .button, .header-icon-link');
 	var turbVal;
 	var turb = document.querySelectorAll('#filter feTurbulence')[0];
 
